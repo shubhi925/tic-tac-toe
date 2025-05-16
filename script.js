@@ -57,7 +57,7 @@ function resetBoard() {
   player1 = true;
   playerXWins = 0;
   playerOWins = 0;
-
+  scoreBox.textContent = "";
   showPlayer.textContent = "Player X's turn";
 }
 
