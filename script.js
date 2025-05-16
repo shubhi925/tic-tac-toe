@@ -55,8 +55,6 @@ function resetBoard() {
   });
 
   player1 = true;
-  playerXWins = 0;
-  playerOWins = 0;
   scoreBox.textContent = "";
   showPlayer.textContent = "Player X's turn";
 }
@@ -89,7 +87,11 @@ function handleClick(index) {
       scoreBox.textContent = "It's a draw! ";
     }
 
-    setTimeout(resetBoard, 3000);
+    setTimeout(() => {
+      resetBoard();
+      playerXWins = 0;
+      playerOWins = 0;
+    }, 3000);
     return;
   }
 
